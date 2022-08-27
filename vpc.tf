@@ -9,7 +9,7 @@ resource "aws_vpc" "eks_vpc" {
 
 resource "aws_route_table" "rt_eks_vpc" {
   vpc_id = aws_vpc.eks_vpc.id
-  //Apply the following route after get a igw deployed 
+
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.gw.id
@@ -76,7 +76,7 @@ resource "aws_subnet" "pub_eks_subnet_2" {
     Name = "pub_subnet_2_${var.project}_vpc"
   }
 }
-//Apply this section after get the subnets deployed
+
 data "aws_subnets" "eks_subnet_ids" {
   filter {
     name   = "vpc-id"
@@ -87,4 +87,3 @@ data "aws_subnet" "eks_subnet" {
   count = length(data.aws_subnets.eks_subnet_ids.ids)
   id    = tolist(data.aws_subnets.eks_subnet_ids.ids)[count.index]
 }
-

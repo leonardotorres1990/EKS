@@ -1,14 +1,15 @@
 Hola!!
 
 
-Este codigo define la implementación del servicio EKS y despliegue de aplicación sobre el clúster.
+Este repo tiene como finalidad el despliegue de aplicación default sobre clúster provisionado en servicio EKS.
+
 Pasos para su despliegue:
 
-1. No incluir archivo eks.tf en el primer despliegue
-2. Comentarear el grupo de lineas de codigo 14-16 y 80-89 del archivo vpc.tf
+1. No incluir los archivos eks.tf  y outputs.tf en el primer despliegue
+2. Comentarear el grupo de lineas de codigo 80-89 del archivo vpc.tf
 3. Realizar primer despliegue
-4. Descomentarear gurpo de lineas de codigo descritas en punto 2, realizar segundo despliegue
-5. Incluir el archivo eks.tf para el tercer despliegue
+4. Descomentarear gurpo de lineas de codigo descritas en punto 2
+5. Incluir los archivos referidos en el punto 1 para el segundo despliegue
 
 
 Inicie sesión en la consola de AWS y sobre el servicio AWS cloudshell ejecutar los pasos referidos en el siguiente enlace:
