@@ -1,6 +1,6 @@
 Hola!!
 
-Este codigo define la implementación del servicio EKS y despliegue de aplicación sobre el clúster.
+Este codigo define la implementación del servicio EKS y despliegue de aplicación default sobre el clúster.
 Pasos para su despliegue:
 
 1. No incluir archivo eks.tf en el primer despliegue
